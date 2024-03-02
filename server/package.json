@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@fast-csv/format": "^5.0.0",
+    "csv-parse": "^5.5.3",
+    "fs": "^0.0.1-security",
+    "p-queue": "^8.0.1",
+    "path": "^0.12.7",
+    "puppeteer": "^22.3.0",
+    "puppeteer-core": "^22.1.0"
+  },
+  "scripts": {
+    "scrape": "node scraping/scrape.js"
+  }
+}
