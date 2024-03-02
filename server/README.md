@@ -1,4 +1,4 @@
-## Setup
+### Setting Up
 Make sure you have Node.js downloaded.
 
 # 1. Cd to where you want to put this project.
