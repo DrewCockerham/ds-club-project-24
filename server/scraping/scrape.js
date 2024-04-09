@@ -67,10 +67,10 @@ async function scrapeAll(
       notFoundHeader = true;
     let redo = false;
     const browser = await pup.launch({
-      headless: true,
+      headless: false,
     });
     const PQueue = await loadPQueue();
-    const queue = new PQueue({ concurrency: 10 });
+    const queue = new PQueue({ concurrency: 5 });
     const writeQueue = new PQueue({ concurrency: 1 });
     const wq = [];
 
@@ -220,7 +220,6 @@ async function main() {
   let redoCount = 0;
 
   let redo = await scrapeAll(join(__dirname, "..", "model", "title+id.csv"));
-
   while (redo && redoCount < maxRedo) {
     redo = await scrapeAll(
       join(__dirname, "..", "model", `error${redoCount}.csv`),
